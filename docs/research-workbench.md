@@ -1,158 +1,177 @@
-# Autarks' Home Research Workbench: checkable AI-assisted research on hardware you own
+# Autarks' Home Research Workbench: from first guess to testable opinion, with AI on hardware you own
 
-*A model-independent engineering layer for AI-assisted research. Revised draft, 19 November 2026.*
+*A model-independent engineering layer for AI-assisted reasoning. Version 3, draft, 19 November 2026.*
 
 *Status: planned, not yet built. This document sets out the method, the development plan and the evaluation design.*
 
 ## Where this fits in Autarks' Home
 
-The Research Workbench is planned as the first research app on the local AI engine of the Autarks' Home appliance. Its purpose is to show owned, offline AI doing useful, checkable work for solo entrepreneurs, independent researchers and small publishers, with the sources, the records and the model all staying in the owner's home. The workbench treats the model as a source of suggestions, not of authority: every consequential claim in a finished brief is traced to an exact passage and a recorded human review. Like all Autarks' Home software, the workbench, its schema, method templates and example cases will be open source (AGPL proposed, not yet final), and usable without buying an appliance.
+The Research Workbench is planned as the first research app on the local AI engine of the Autarks' Home appliance. Its purpose is to show owned, offline AI doing useful, checkable work for solo entrepreneurs, independent researchers and small publishers, with the sources, the records and the model all staying in the owner's home. The workbench treats the model as a source of suggestions, not of authority: the researcher owns the original idea and every decision, and each step from that idea to a testable statement is recorded where another person can check it. Like all Autarks' Home software, the workbench, its schema, method templates and example cases will be open source (AGPL proposed, not yet final), and usable without buying an appliance.
 
 ## Aim and research question
 
-The workbench is a local tool that helps a person record, challenge and revise factual claims. It starts with one repeated task: turning a small packet of conflicting sources into a short brief whose consequential claims can be traced to exact passages and reviewed by another person. Development is staged, and each stage continues only when the prototype demonstrably improves the work.
+Much good research starts with a hunch: a first guess, grasped before it can be justified, resting on assumptions not yet spelled out. Few tools help turn an instinct into something that can be tested. Version 3 of the workbench is built around that step. It does not follow a fixed route from theory, through experiment, to conclusion. It starts from a first guess and its assumptions, works out what must logically follow if the guess is right, and then asks which consequences can be checked against evidence or tested by experiment. The philosopher Charles Sanders Peirce described this pattern of guess, deduction and test; the workbench uses it in plain terms.
 
-The research question is this: can a modest local model, operating inside a workflow that requires evidence, competing explanations and explicit review, reduce consequential research errors at a tolerable cost in researcher time? The first test uses the same model and source packet on both sides. A comparison against a capable hosted model comes only after the effect of the method itself has been measured.
+The research question is this: does AI mediation, by a modest local model inside a workflow that keeps the researcher in charge, help people turn instincts into clearer, more testable statements, without flattening or discarding the original insight? "Flattening" means rewording an idea into a safer, more conventional claim that loses what made it distinctive. The first test uses the same model on every arm; a comparison against a capable hosted model comes only after the effect of the method itself has been measured.
 
-The project builds on the earlier discussion of how people learn to correct their own reasoning. The core idea is simple: people improve when their claims, their evidence and their changes of mind are written down where someone else can check them. Probability and statistics remain available where the question calls for them. The workbench records their assumptions, inputs and limits alongside other forms of warrant, such as a reproducible calculation, a documentary chain of custody, or a deduction from stated premises. A model's confidence score carries no evidential weight by itself. Conjectures are a recorded claim type: an intuitive leap is kept, labelled and tested against the evidence rather than lost.
+The project builds on the earlier discussion of how people learn to correct their own reasoning. People improve when their claims, evidence and changes of mind are written down where someone else can check them; version 3 applies this one step earlier, to the guess itself. In the developer's personal view, statistical inference at scale fits poorly with human intuition, and he welcomes having that view tested to the limit. The workbench is one way to test it, and the results will be published either way.
 
 ## First use and scope
 
-The initial user is the developer, working as researcher and editor, so the method is tried on real work from the start. The intended users are the people Autarks' Home is built for: solo entrepreneurs, independent researchers and small specialist publishers whose work involves repeated fact-checking against documentary sources. The first study uses public-domain, licensed or synthetic material. It begins with manually supplied text excerpts or text-based PDFs and human-verified anchors. Web crawling, automated OCR, collaboration, public hosting and foundation-model training are deferred.
+The initial user is the developer, working as researcher and editor, so the method is tried on real work from the start. The intended users are solo entrepreneurs, independent researchers and small publishers who need to know which of their ideas will stand up. The first study uses historical, licensed and synthetic cases and the developer's own working conjectures. Web crawling, automated OCR, collaboration, public hosting and foundation-model training are deferred.
 
-The prototype delivers a local workspace, a versioned case file, a reviewer-readable audit report, and a clean Markdown brief. A consequential claim is one whose correction could change the brief's conclusion or the reader's decision. These claims are marked during review, and each must have a recorded disposition before final export. An explicitly labelled draft export is available for open work.
+The prototype delivers a local workspace, a versioned case file holding the full trail from instinct to testable statement, a reviewer-readable audit report, and a clean Markdown brief. Each consequential claim, one whose correction could change the conclusion, needs a recorded disposition before final export.
 
 ## What would justify continuing
 
-A reviewer should be able to reopen the underlying passage, understand the inference, find contrary evidence, and see what changed after a correction. The engine should still support manual research when inference is unavailable. The first feasibility study should show fewer unsupported consequential claims under matched conditions and keep median active analyst time within 25% of the prompted baseline. These are proposed decision thresholds for a pilot.
+A reviewer should be able to read the original guess in the researcher's words and follow every step from it to a test and its evidence. The engine should still support manual work without inference. The feasibility study should show more hidden assumptions surfaced and more testable consequences than a well-prompted model alone, with the original idea preserved and active time within 25% of the baseline (thresholds below).
 
-# Evidence and Reasoning Workflow
+# From Instinct to Testable Opinion
 
-## From question to reviewed brief
+## The six steps
 
-1. Frame the question. The researcher records scope, definitions, the decision at stake, and what evidence could change the conclusion. For confirmatory work the initial protocol is frozen and later departures are logged.
+1. Capture the first guess. The researcher writes the instinct in their own words, with the date, what prompted it and, optionally, how confident they feel. It is labelled as a conjecture. The original text is never overwritten; every reformulation is stored as a new version beside it.
 
-2. Capture sources. The workbench preserves the available version, rights, origin and retrieval record. Evidence is anchored to a specific passage, table cell or page image, and the record distinguishes a literal quotation from a transcription or paraphrase.
+2. Make the assumptions explicit. The local model proposes the unstated assumptions the guess seems to rest on: what must be true of the world, the terms or the evidence for it to make sense. The researcher accepts, edits or rejects each one and can add their own. Rejected assumptions are kept with a reason, and the origin of each assumption, researcher or model, is recorded.
 
-3. Propose claims. Compound assertions are broken into statements that can be reviewed independently. Each is classified as observation, interpretation, causal inference, calculation or conjecture. Evidence is linked explicitly as supporting, contradicting or qualifying the claim, with a short rationale.
+3. Derive the consequences. With the guess and accepted assumptions as premises, the researcher and the model work out one or more logical consequences: "if the guess and these assumptions hold, then this must follow." Each is stored as a numbered chain of short steps, and every step names the premises or earlier steps it relies on, so each move can be checked separately. The model also flags gaps, such as a step needing an unlisted assumption.
 
-4. Challenge and review. The workbench presents competing explanations and the strongest contrary evidence. The reviewer records a decision and rationale, chooses whether the claim is supported, contested, insufficiently evidenced or withdrawn, and specifies what could reopen it. Disagreement and changes of mind are preserved.
+4. Turn each consequence into a testable opinion. The workbench asks what observation or experiment would support it, what result would count against it, whether the test separates this guess from its obvious rivals, and roughly what it would cost in time, money and equipment. A consequence that no possible result could count against is marked as not yet testable and cannot be promoted until it is sharpened.
 
-5. Export and revise. The workbench generates a brief and a review appendix with stable claim references. A changed source or claim invalidates affected approvals and queues dependent conclusions for review. The prior brief is retained with its version identifier.
+5. Gather existing evidence. Before any new experiment, the workbench checks what is already known, using the evidence layer from version 2. Sources are anchored to exact passages; compound assertions are broken into reviewable claims classified as observation, interpretation, causal inference, calculation or conjecture; and evidence is linked as supporting, contradicting or qualifying. The model surfaces the strongest contrary evidence and competing explanations, with source pointers. For historical sources, review prompts start from the Library of Congress primary source analysis tool. [2]
 
-## Three kinds of checks
+6. The researcher decides. For each testable opinion the researcher records a decision: pursue the test, revise the guess, park it, or abandon it, with a rationale and what could reopen it. Changes of mind are preserved. If an assumption is later rejected or a source changes, everything that depended on it returns to review.
 
-Mechanical checks verify exact quotation against the saved text, source version and locator resolution, required evidence links, date or unit consistency where encoded, and whether approvals still match the current claim. Simple numeric claims are recomputed from recorded inputs with a versioned script. For explicitly deductive steps, the workbench starts with small typed rules and looks for inconsistent premises or counterexamples within a declared domain. A pass certifies only the named check.
+The AI mediates. It proposes, questions and finds; it does not own the intuition and it does not decide.
 
-Model suggestions surface missing qualifiers, misleading excerpts, alternative explanations, and possible shared origins. Each suggestion is recorded with its source pointers. A reviewer judges relevance, source credibility, whether a passage supports the claim in context, and how far a result generalises. An override records who made it and why. Broken anchors block reviewed export until they are repaired or the affected claim is withdrawn.
+## Guarding the original insight
+
+The biggest risk is that a helpful model turns an unusual idea into an ordinary one. The original wording is always shown beside the current formulation. The model is asked, as a separate task, to name what is distinctive in the original guess and to flag any reformulation that drops it. Before a testable statement is exported, the researcher confirms that it still expresses their idea, or records what was given up and why. Fidelity is also measured directly in the evaluation.
+
+## Checks
+
+Mechanical checks verify that every step cites only listed premises or earlier steps, that no rejected assumption is still in use, that every consequence promoted as testable has a stated result that would count against it, and that approvals match the current version. From version 2 they also verify exact quotation, locator resolution, required evidence links and recomputation of simple numeric claims. For explicitly deductive steps, small typed rules look for inconsistent premises or counterexamples within a declared domain. A pass certifies only the named check.
+
+Model suggestions are recorded with their inputs; the reviewer judges each one, and an override records who made it and why.
 
 ## Worked case
 
-A newspaper claims a public library opened in 1894 and a later local history repeats the date. Council minutes show that a reading room opened that year, and a programme identifies the formal library opening in 1895. Both dates can be retained once the claims distinguish the two events. The later history cites the newspaper, so the reviewer records a shared origin. If a new scan changes the programme's date, the opening claim and any chronology derived from it return to review. The archive's silence about earlier activity remains a question about coverage.
+Michael Faraday's long-held instinct, in plain terms, was that electric and magnetic forces act through the space between bodies, along lines of force that are physically real, and that light might be connected with the same agency. That is step 1. Step 2 makes assumptions explicit: the space around a magnet is in a real physical state; a transparent material in that space shares that state; and light passing through the material could be influenced by it. Step 3 derives a consequence: a strong magnetic field should change light passing through a transparent material. Step 4 makes it testable: pass polarised light through dense glass in a strong field; no change under good conditions would count against it. Faraday ran a test of this kind in 1845 and found that the plane of polarisation rotates. The record would show what the result supports and what it leaves open, the full theory of fields that others later developed. The reconstruction is a simplified teaching case, not a claim about exactly how Faraday reasoned.
 
-# Scientific and Historical Methods
+# Historical Cases as a Reference Standard
 
-## Scientific inquiry
+The evaluation needs cases where the instinct, assumptions, consequences and later tests are well documented. Each is written at the level of standard historical accounts, citing published secondary sources, with no invented quotations or figures, and is reviewed by someone with historical knowledge before the holdout is frozen. The candidates are:
 
-For a quantitative case, the workbench records the target population, outcome, exposure or intervention, comparison, sampling procedure, exclusions, and analysis plan before a confirmatory analysis is run. Exploratory findings and protocol departures are logged. The dataset fingerprint, code version, parameters and output are kept together so a second run can reproduce the reported quantity. The template asks which result would disconfirm the hypothesis and what measurement error, confounding or selection could explain the observation. Sensitivity checks are tied to those assumptions. For causal language, the template asks for the identification argument and an appropriate comparison.
+- Faraday's lines of force, as in the worked case.
+- Wegener's continental drift: the core guess proved broadly right while its proposed mechanism did not, testing whether the workbench can separate a sound instinct from a weak assumption.
+- Semmelweis and childbed fever: a consequence, that hand-washing would reduce deaths, was supported in practice while his explanation was rejected at the time.
+- The luminiferous ether, as a counter-case: an intuition carried cleanly to a test, the Michelson–Morley experiment, that counted against it, so the case set does not reward agreeing with every guess.
 
-A first fixture can use synthetic reading-room attendance. If attendance rises after longer opening hours, the reviewer records a competing explanation such as term-time demand and checks a comparison period or venue. The reported numerator, denominator and time window are verified from an extract. If the design leaves the effects entangled, the brief publishes the observed change and the unresolved causal question. The tool lets the reviewer downgrade only the causal clause while preserving the checked calculation.
-
-## Historical inquiry
-
-The workbench records creator, date of creation, date of the event described, intended audience, purpose, custody or publication history, and whether the reviewer examined an original, transcription, translation, or retelling. What the source says and what the researcher infers are kept in separate fields. Likely or documented dependencies between accounts are linked. In cases of conflicting testimony, the reviewer compares access to the event, proximity, independence and corroboration, and records gaps in the surviving evidence.
-
-The library case tests whether the workbench can represent contested terms and dates without forcing an artificial resolution. A second case asks whether two reports of a decision derive from the same circular. The reviewer can retain rival readings with a rationale and an explicit account of what further records would distinguish them.
-
-## Method rules as versioned records
-
-A method template supplies prompts, required fields, available checks and review criteria. The template is chosen per case and its version pinned, so a later rule change can be audited. A reviewer can mark a requirement inapplicable with a reason. An examples folder holds one passing and one failing case per rule. Both methods use the same record types, and specialised fields are added only when they change a review decision. Experimental preregistration follows OSF guidance, and primary-source inquiry prompts start from the Library of Congress analysis tool. [1–2]
+A model may already know how these stories end, so each case is also run disguised, with names, dates and terms altered and the logical structure kept. Synthetic cases and the developer's own open conjectures are added, and results are reported by case type.
 
 # Local Architecture and Ghost Boundary
 
 ## Data and ownership
 
-The workbench uses SQLite for structured records and a local folder for source files, both on the owner's appliance. It stores a source ID, version hash, bibliographic identity, acquisition time and rights. Each evidence span is stored with source version, locator, exact excerpt or permitted reference, and extraction method. Each claim revision is stored with stable ID, statement, scope, type, premise and evidence links, author, and review status. Check results and review decisions are kept with the rule version, inputs, outcome and actor. Sources and revisions map to entities, checks to activities and reviewers to agents, so later interoperability can draw on W3C PROV. [3]
+The workbench uses SQLite for structured records and a local folder for source files, both on the owner's appliance. Version 3 adds five record types to the version 2 schema: the instinct (original text, author, date, prompt, optional confidence, never overwritten), the assumption (text, origin, status, rationale), the consequence (numbered steps with premise links), the test proposal (supporting result, counting-against result, rivals separated, estimated cost, status) and the decision (choice, rationale, what could reopen it). Version 2's source, evidence, claim, check and review records are kept and map onto W3C PROV. [3]
 
-Revisions, their links and invalidation events are written in a single transaction. Saved bytes are verified on import, identical content is deduplicated while attribution and origin are retained, and an explicit tombstone is recorded when restricted material must be removed. A fingerprint detects byte changes within the recorded chain. Authenticity and credibility remain matters for source review. The workbench exports versioned JSON and permitted attachments with a manifest and checksums, and export and restore are verified in a fresh workspace. External exports are previewed for restricted passages and private annotations.
+Revisions, links and invalidation events are written in a single transaction, so rejecting an assumption reliably queues every dependent step, consequence, test and decision for review. Exports are versioned JSON with a manifest and checksums, restore is verified in a fresh workspace, and external exports are previewed for private notes.
 
 ## Model adapter and local operation
 
-The first version is a CLI, a generated HTML review report and a loopback-only inference adapter. The adapter accepts bounded passages and a task schema, then returns structured candidate claims, cited span IDs or objections. The result is validated, malformed suggestions are quarantined, and explicit review is required before anything is promoted into the claim record. The workbench logs model and weight identifiers, runtime, quantisation, prompt version, inputs, generation settings, latency and failures. It keeps the event and input records needed to replay a check, and distinguishes reproducible checks from variable model generations.
+The first version is a CLI, a generated HTML review report and a loopback-only inference adapter. The adapter accepts a bounded input and a task schema (propose assumptions, propose or critique a chain, propose tests, find evidence spans, flag drift from the original) and returns structured suggestions. Output is validated, malformed suggestions are quarantined, and review is required before anything enters the record. Model, quantisation, prompt version, inputs, settings, latency and failures are logged.
 
-Phase one benchmarks a quantised instruct model on hardware the project already has. The smallest usable configuration is selected on measured latency, memory use, structured-output validity and review effort. Context and retries are capped, truncated inputs are reported, and manual capture, review and export stay available on timeout or invalid output. Offline operation is confirmed with outbound networking disabled. Source text is treated as untrusted data, and the model is limited to suggestions, with no tool or publishing privileges. Any hosted inference is a separate, explicit experiment using a public packet.
+Phase one benchmarks a quantised instruct model on hardware the project already has: a Raspberry Pi 5 with the local AI peripheral. The smallest usable configuration is chosen on measured latency, memory and output validity, and the manual path stays available on failure. Offline operation is confirmed with outbound networking disabled. Source text is treated as untrusted data, and the model has no tool or publishing privileges. Any hosted inference is a separate, explicit experiment using public cases only.
 
 ## Ghost integration
 
-The workbench is a separate application with its own storage, configuration and release cadence. Its publishing path is a clean Markdown draft sent to the owner's own Ghost site, with no changes to the site itself; the owner then edits and publishes it in the usual way. The handoff is tested first against a disposable Ghost instance, including formatting, citation links and exclusion of private material. Once its value is measured, an optional reader may retrieve the owner's published material through Ghost's read-only Content API. [4] Rolling back means disabling the optional reader or discarding the export; publishing on the site carries on unaffected.
+The workbench is a separate application with its own storage, configuration and release cadence. Its publishing path is a clean Markdown draft sent to the owner's own Ghost site, with no changes to the site itself; the owner edits and publishes it in the usual way, choosing which parts of the trail to include. The handoff is tested first on a disposable Ghost instance; a later optional reader may use Ghost's read-only Content API. [4] Rolling back leaves the site unaffected.
 
 # Development Plan
 
-The plan below is proposed as phase one of the Mozilla Foundation Fellowship year (June 2027 to May 2028), if that application is funded, planned for June to August 2027, at the start of the Fellowship. Phase one does not depend on the appliance beta and involves no beta users: it runs on existing hardware, with the developer as researcher. The later phases are described after it.
+The plan below is proposed as phase one of the Mozilla Foundation Fellowship year (June 2027 to May 2028), if that application is funded, planned for June to August 2027. Phase one does not depend on the appliance beta and involves no beta users or members of the public: it runs on existing hardware, with the developer as researcher. Paid expert raters score anonymised outputs; they do not use the software.
 
 ## Stage 0: Establish the baseline
 
-Weeks 1–2, 20–30 hours. One research brief the project would genuinely use is selected. One historical and one scientific case record are built by hand. The review rubric is written, consequential errors are defined, and a small development set, distinct from the later evaluation packets, is frozen. Two timed runs are recorded using a conventional prompted assistant and the supplied packets. The stage is complete when the manual workflow can produce an auditable brief and exposes at least one concrete failure that a rule or review step could catch.
+Weeks 1–2, 20–30 hours. Historical, disguised and synthetic cases are written with reference lists, the rubric is set, a development set is frozen, and the developer records at least two of his own conjectures. Two timed runs are recorded with a conventionally prompted local model. The stage is complete when the manual record can hold a full trail from instinct to test for one case and the baseline shows at least one concrete failure, such as a missed assumption or an untestable consequence, that a rule or review step could catch.
 
 ## Stage 1: Build the manual core
 
-Weeks 3–5, 30–40 hours. This stage implements source capture, stable anchors, claim and evidence edits, the review queue and Markdown plus JSON export. Fixtures cover broken and moved anchors, duplicate source lineage, disputed claims, and stale approvals. Two full cases are demonstrated offline, and an exported case is restored in a fresh workspace. The stage is complete when every fixture behaves as specified and the manual path is practical enough to use for a third brief.
+Weeks 3–5, 30–40 hours. This stage implements the five new record types, step-by-step chains with premise links, dependency invalidation, the version 2 evidence layer, the review queue, and Markdown plus JSON export. Fixtures cover a rejected assumption still in use, a step citing a missing premise, a consequence with no counting-against result, an overwritten original, broken anchors and stale approvals. The stage is complete when every fixture behaves as specified and the manual path is practical on one of the developer's own conjectures.
 
 ## Stage 2: Add local assistance
 
-Weeks 6–8, 30–40 hours. This stage implements the model adapter, validation, suggestion review and audit records. One local model is used for the matched trial and a second compatible model for a swap test. The same cases are run with inference disabled to confirm that the audit decisions and exports are still accessible. The stage is complete when all scripted source and revision checks pass with either backend, offline operation is measured, and invalid model output leaves the authoritative record intact.
+Weeks 6–8, 30–40 hours. This stage implements the model adapter, the five suggestion tasks, validation and audit records. One local model is used for the matched trial and a second for a swap test. The same cases are run with inference disabled to confirm the records and exports remain usable. The stage is complete when all scripted checks pass with either backend, offline operation is measured, and invalid model output leaves the record intact.
 
 ## Stage 3: Evaluate and trial publication
 
-Weeks 9–12, 35–50 hours. This stage runs the frozen comparison, a small independent double-review where feasible, and a dry run of the Markdown handoff on a disposable Ghost instance. A few invited researchers perform a real research task using non-sensitive material. The paid pilot (below) starts only if the evaluation meets its gate and the invited researchers show repeat use or payment intent on the terms proposed.
+Weeks 9–12, 35–50 hours. This stage runs the frozen comparison, blind scoring by paid expert raters, and a dry run of the Markdown handoff on a disposable Ghost instance. The results, including failures, are written up as a case-set report.
 
 ## Time budget and decision log
 
-Phase one takes 115–160 hours across 12 part-time weeks, roughly 10–13 hours a week on average. Paid reviewer and evaluation time would come from the Fellowship project budget. Each gate is a go/no-go point for scope: at each one, the decision log records the observed result, what changed, the hours used and the next step. If a stage overruns by more than a week, scope is cut back to the manual evidence and review flow before the schedule is extended.
+Phase one takes 115–160 hours across 12 part-time weeks, roughly 10–13 hours a week. Paid rater time would come from the Fellowship project budget. Each gate is a go/no-go point recorded in a decision log. If a stage overruns by more than a week, scope is cut back to the manual records and review flow before the schedule is extended.
 
 ## Later phases
 
-Phase two (September 2027 to February 2028) connects the workbench's Markdown handoff to the owner's own Ghost site as part of the appliance's paper-publishing path, and adds a larger local model arm on the testbed hardware requested for the Fellowship, with the same frozen packets run across machines.
+Phase two (September 2027 to February 2028) connects the Markdown handoff to the owner's own Ghost site as part of the appliance's paper-publishing path, adds a larger local model arm on the Fellowship testbed hardware, and invites a few researchers to try the method on their own non-sensitive conjectures. The paid pilot starts only if phase one meets its gate.
 
-Phase three (March to May 2028) repeats the benchmarks across the full hardware range, including a Mac Studio-class machine if one is available, and adds a hosted-model comparison arm using public packets only. It widens pilots to more invited researchers, beyond the developer and the first small group, and publishes the case set, method templates and findings, whatever the results show.
+Phase three (March to May 2028) repeats the benchmarks across the hardware range, adds a hosted-model arm on public cases, widens trials to more invited researchers, and publishes the case set, templates and findings, whatever the results show.
 
 # Evaluation and Decision Rules
 
 ## Comparison design
 
-The evaluation freezes 12 held-out packets, six historical and six scientific, plus at least four development packets for tuning. Each held-out packet defines a question, expected consequential claims, acceptable evidence spans, ambiguous cases, and planted failure modes such as recycled testimony, an out-of-context quotation, a confounded inference or an incorrect denominator. Some cases make abstention the right disposition. The rubric, budget and thresholds are registered before the holdout is opened.
+The evaluation freezes 12 held-out cases: the four historical cases in named and disguised form (eight), plus four synthetic cases, with at least four more kept for development. Each held-out case defines the starting instinct in neutral wording, reference lists of hidden assumptions, valid consequences and plausible tests, a small evidence packet, and planted traps such as a consequence that does not follow, an assumption that quietly changes the idea, and a test that cannot discriminate between rivals. The developer's own conjectures run as a separate strand with no reference answer; only fidelity, testability and time are measured there. The rubric, budget and thresholds are registered before the holdout is opened, following OSF guidance. [1]
 
-The comparison has three arms: A, the same local model with a good prompt requesting citations and caveats; B, the same model plus the workbench; and C, the workbench used manually. All arms get the same source packets and completion instructions. A and B have equal model-call or token ceilings, and actual usage, hardware, wall time and active analyst time are logged. Balanced condition ordering and spacing between repeats reduce carryover. Exported briefs are randomised and normalised for blind scoring where practical. If the solo developer runs all arms, memory and workflow familiarity are recorded as limitations. A second reviewer scores at least four packets independently before disagreements are discussed.
+The comparison has three arms: A, the same local model with a good prompt asking it to list assumptions, derive consequences and propose tests; B, the same model inside the workbench; and C, the workbench used manually, with no model. All arms start from the same instinct and evidence packet. A and B have equal model-call or token ceilings, and usage, hardware, wall time and active analyst time are logged. Condition order is balanced, and outputs are normalised and randomised for blind rating. If the developer runs all arms, memory and familiarity are recorded as limitations.
 
-## Primary measures and guardrails
+## Primary measures
 
-Unsupported consequential claim rate is the count of asserted consequential claims lacking adequate support divided by all asserted consequential claims. Omissions are scored separately as the share of expected consequential claims correctly covered. Unjustified causal claims and false corroboration are recorded as named error types. For traceability, the measure is the count of consequential citations a reviewer can reopen at the quoted passage on the exact saved version. Both initial production and the task of finding and correcting a seeded error are timed. Median and worst cases, raw paired results, reasons for disagreement and examples of failures are all recorded.
+- Assumptions surfaced: the share of reference assumptions that appear, accepted, in the final record, plus the share of listed assumptions raters judge relevant, so padding is not rewarded.
+- Validity: the share of derived consequences that blind expert raters judge logically sound, each step following from the stated premises.
+- Testability: the share of consequences raters judge genuinely testable, with a result that would count against them and a test that separates the guess from at least one rival.
+- Fidelity: whether the final statements still express the original idea. On his own conjectures the developer rates this on a five-point scale; on reference cases a blind rater records whether the distinctive element of the starting instinct survived.
+- Evidence layer, from version 2: unsupported consequential claim rate and share of consequential citations that reopen at the quoted passage.
+- Effort: median and worst-case active analyst time, and time to find and correct a seeded error.
 
-The feasibility gate is passed if B reduces unsupported consequential claims by at least 30% relative to A, loses at most five percentage points in expected claim coverage, resolves at least 95% of consequential citations on the first review pass, and takes at most 25% more median active analyst time. Reviewed exports must have zero known broken anchors among approved citations, and the scripted fixtures must show full stale-approval detection. If A produces zero unsupported claims, correction time is assessed and a fresh, harder holdout is run before any accuracy gain is claimed.
+A second rater scores at least four cases independently, agreement is reported, and raw results and failures are published.
+
+## Pass thresholds
+
+The feasibility gate is passed if, compared with A, arm B:
+
+- surfaces at least 20 percentage points more of the reference assumptions (proposed);
+- achieves at least 80% of consequences rated logically sound, and no lower than A (proposed);
+- achieves at least 25% more consequences rated genuinely testable (proposed);
+- keeps the distinctive element of the original instinct in at least 90% of cases, with a median fidelity rating of at least four out of five on the developer's own conjectures, and no lower than A (proposed);
+- reduces unsupported consequential claims by at least 30%, and resolves at least 95% of consequential citations on the first review pass (as version 2);
+- takes at most 25% more median active analyst time (as version 2).
+
+Approved exports must have zero known broken anchors and zero uses of rejected assumptions, and the fixtures must show full detection of stale approvals and dependent consequences. If A already scores near the ceiling on a measure, a fresh, harder set of cases is run before any gain is claimed. Any change to the proposed numbers is made and logged before the holdout is opened.
 
 ## Interpretation and next experiment
 
-Arm C shows whether local inference earns its place through reduced effort or improved coverage. If the method helps but local inference adds little, the manual workbench stays and inference is narrowed to one demonstrably useful task. If quality improves at excessive cost, the review form is simplified and retested on fresh cases. If two iterations fail to improve either errors or correction time, product investment stops and the case set and findings are preserved and published. The results are feasibility evidence from a small sample. The later hosted-model arm tests whether portability changes the result.
+Arm C shows whether the method's structure helps by itself and whether local inference earns its place. If B beats A but not C, the gain comes from the method, and inference is narrowed to the task where it demonstrably helps. If B improves testability but lowers fidelity, the model is flattening ideas; the drift check is strengthened and the trial repeated on fresh cases. If named and disguised versions differ sharply, the named result is treated as memory. If two iterations fail to improve assumptions, testability or fidelity, product investment stops and the case set and findings are published. The results are feasibility evidence from a small sample.
 
 # Open Source, Sustainability and Principal Risks
 
 ## Open source and IP hygiene
 
-The workbench application, its schema, method specification, method templates and example cases will be open source, like all Autarks' Home software (AGPL proposed, not yet final). There are no paid method packs or proprietary editions. The project keeps a dated design log and an inventory of code, generated contributions, model terms, corpora and dependencies, and records the right to use and redistribute each component. Restricted corpora and client materials are kept out of the software and the public benchmark. Attribution and licence notices are captured, and provenance and licensing are verified for any incorporated generated code. The licence check on models and corpora is completed before the first public release.
+The workbench application, schema, method specification, templates and example cases, including the historical reference cases, will be open source, like all Autarks' Home software (AGPL proposed, not yet final). There are no paid method packs, proprietary editions or patents. A dated design log and an inventory of code, model terms, corpora and dependencies record the right to redistribute each; client material stays out of the public case set. The licence check on models and corpora is completed before the first public release.
 
 ## Sustainability through services
 
-The first market is independent researchers and specialist publishers who repeatedly need defensible briefs. Five of them are interviewed about their last disputed claim, the time spent checking it, their current use of tools such as Zotero, and who pays for review. Zotero already supports citations and anchored annotations, so the interviews test whether claim-level decisions, source dependencies and revision after a correction add value in their existing workflow. [5]
+The first market is independent researchers, specialist publishers and solo entrepreneurs who have ideas worth testing and little help in shaping them. Five are interviewed about a recent hunch they pursued or dropped and their current tools, such as Zotero, to test whether a recorded trail from guess to test adds value beyond citations and annotations. [5]
 
-Revenue comes from services, not from the software: setup, onboarding, support and the paid pilot. The pilot is a fixed-scope support-and-onboarding service for one brief or review workflow, with local deployment and a portable audit export. Its test price is £250, covering up to four hours of developer onboarding and support. The pilot asks for payment or a written purchase commitment. It continues only if two users commit, at least one uses the workflow on a second brief, and recorded support time fits the price. After repeat use, the next test is an ongoing support and updates service. Hosted collaboration is considered only when demand and capacity justify it.
+Revenue comes from services, not the software: setup, onboarding, support and a paid pilot. The pilot takes one question from first guess to testable statement, with local deployment, at a test price of £250 for up to four hours of support, paid or committed in writing. It continues only if two users commit, one reuses the workflow, and support time fits the price.
 
 ## Principal risks and responses
 
-- False assurance. Open issues stay visible and each pass is attached to its specific check. The evaluation audits examples where valid citations still support the wrong inference.
-- Review overhead. Active minutes are measured against the baseline. Fields that make no observable difference to review decisions are removed.
-- Data exposure and rights. Offline operation and restore are tested, exports are limited to permitted evidence, and redactions are reviewed before a brief leaves the workspace.
-- Pilot bias and solo maintenance. The case set is frozen, independent scoring is invited, and the release is kept small enough to support within the time budget.
-- Publishing coupling. The handoff is rehearsed on a disposable Ghost instance, and integration pauses if it would need any change to the owner's site.
+- Flattening the idea. The original is never overwritten, a drift check compares each reformulation with it, and fidelity is a pass criterion.
+- False rigour. Every chain shows its premises, rejected assumptions are blocked mechanically, and the evaluation plants invalid steps.
+- Memorised history. Historical cases run named and disguised, alongside synthetic and live cases.
+- Review overhead and solo bias. Active time is measured against the baseline, the case set is frozen, and scoring is blind and independent.
+- Data exposure. Operation is offline, and unpublished conjectures stay in the workspace unless the owner publishes them.
 
 ## References
 
@@ -165,3 +184,14 @@ Revenue comes from services, not from the software: setup, onboarding, support a
 [4] Ghost, Content API
 
 [5] Zotero, PDF Reader and Note Editor
+
+Historical case write-ups will cite the published secondary sources they draw on; these are added in Stage 0.
+
+# What changed from version 2
+
+- Reframed around moving from instinct to testable opinion in six steps, with the decision left to the researcher; the research question asks whether AI mediation helps without flattening the insight.
+- Version 2's claim checking is kept as the evidence layer; five record types are added.
+- Arms A, B and C are kept; new measures (assumptions, validity, testability, fidelity) have proposed thresholds.
+- Historical cases, run named and disguised, become the reference standard; Faraday replaces the library worked case, and the method-template sections are folded into the six steps.
+- Phase one involves no invited researchers; paid raters only score outputs. Invited researchers and the paid pilot move to phase two.
+- The developer's personal view on intuition is stated as a view to be tested.
