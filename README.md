@@ -48,5 +48,6 @@ See [LICENSE-NOTE.md](LICENSE-NOTE.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - [Architecture](docs/architecture.md) — the high-level stack and how the parts fit together
 - [Design overview](docs/design-overview.md) — goals, principles, user journeys, the guild model and the planned AI peripheral
+- [Research Workbench](docs/research-workbench.md) — the planned first research app on the local AI engine: method, development plan and evaluation design
 - [Roadmap](ROADMAP.md)
 - Project page: [https://autarks-home.com](https://autarks-home.com)
