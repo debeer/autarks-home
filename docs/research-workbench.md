@@ -88,7 +88,7 @@ The workbench is a separate application with its own storage, configuration and 
 
 # Development Plan
 
-The plan below is proposed as phase one of the Mozilla Foundation Fellowship year (June 2027 to May 2028), if that application is funded, planned for September to November 2027, after the invited beta of the appliance has started. Phase one runs on existing hardware. The later phases are described after it.
+The plan below is proposed as phase one of the Mozilla Foundation Fellowship year (June 2027 to May 2028), if that application is funded, planned for June to August 2027, at the start of the Fellowship. Phase one does not depend on the appliance beta and involves no beta users: it runs on existing hardware, with the developer as researcher. The later phases are described after it.
 
 ## Stage 0: Establish the baseline
 
@@ -104,7 +104,7 @@ Weeks 6–8, 30–40 hours. This stage implements the model adapter, validation,
 
 ## Stage 3: Evaluate and trial publication
 
-Weeks 9–12, 35–50 hours. This stage runs the frozen comparison, a small independent double-review where feasible, and a dry run of the Markdown handoff on a disposable Ghost instance. A few prospective users are invited to perform a real research task using non-sensitive material. The paid pilot (below) starts only if the evaluation meets its gate and prospective users show repeat use or payment intent on the terms proposed.
+Weeks 9–12, 35–50 hours. This stage runs the frozen comparison, a small independent double-review where feasible, and a dry run of the Markdown handoff on a disposable Ghost instance. A few invited researchers perform a real research task using non-sensitive material. The paid pilot (below) starts only if the evaluation meets its gate and the invited researchers show repeat use or payment intent on the terms proposed.
 
 ## Time budget and decision log
 
@@ -112,9 +112,9 @@ Phase one takes 115–160 hours across 12 part-time weeks, roughly 10–13 hours
 
 ## Later phases
 
-Phase two (December 2027 to February 2028) connects the workbench's Markdown handoff to the owner's own Ghost site as part of the appliance's paper-publishing path, and adds a larger local model arm on the testbed hardware requested for the Fellowship, with the same frozen packets run across machines.
+Phase two (September 2027 to February 2028) connects the workbench's Markdown handoff to the owner's own Ghost site as part of the appliance's paper-publishing path, and adds a larger local model arm on the testbed hardware requested for the Fellowship, with the same frozen packets run across machines.
 
-Phase three (March to May 2028) repeats the benchmarks across the full hardware range, including a Mac Studio-class machine if one is available, and adds a hosted-model comparison arm using public packets only. It widens user pilots beyond the developer and invited prospective users, and publishes the case set, method templates and findings, whatever the results show.
+Phase three (March to May 2028) repeats the benchmarks across the full hardware range, including a Mac Studio-class machine if one is available, and adds a hosted-model comparison arm using public packets only. It widens pilots to more invited researchers, beyond the developer and the first small group, and publishes the case set, method templates and findings, whatever the results show.
 
 # Evaluation and Decision Rules
 
