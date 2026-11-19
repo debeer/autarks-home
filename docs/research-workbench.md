@@ -14,7 +14,7 @@ The workbench is a local tool that helps a person record, challenge and revise f
 
 The research question is this: can a modest local model, operating inside a workflow that requires evidence, competing explanations and explicit review, reduce consequential research errors at a tolerable cost in researcher time? The first test uses the same model and source packet on both sides. A comparison against a capable hosted model comes only after the effect of the method itself has been measured.
 
-The project builds on the earlier discussion of how people learn to correct their own reasoning. The core idea is simple: people improve when their claims, their evidence and their changes of mind are written down where someone else can check them. Probability and statistics remain available where the question calls for them. The workbench records their assumptions, inputs and limits alongside other forms of warrant, such as a reproducible calculation, a documentary chain of custody, or a deduction from stated premises. A model's confidence score carries no evidential weight by itself.
+The project builds on the earlier discussion of how people learn to correct their own reasoning. The core idea is simple: people improve when their claims, their evidence and their changes of mind are written down where someone else can check them. Probability and statistics remain available where the question calls for them. The workbench records their assumptions, inputs and limits alongside other forms of warrant, such as a reproducible calculation, a documentary chain of custody, or a deduction from stated premises. A model's confidence score carries no evidential weight by itself. Conjectures are a recorded claim type: an intuitive leap is kept, labelled and tested against the evidence rather than lost.
 
 ## First use and scope
 
@@ -34,7 +34,7 @@ A reviewer should be able to reopen the underlying passage, understand the infer
 
 2. Capture sources. The workbench preserves the available version, rights, origin and retrieval record. Evidence is anchored to a specific passage, table cell or page image, and the record distinguishes a literal quotation from a transcription or paraphrase.
 
-3. Propose claims. Compound assertions are broken into statements that can be reviewed independently. Each is classified as observation, interpretation, causal inference or calculation. Evidence is linked explicitly as supporting, contradicting or qualifying the claim, with a short rationale.
+3. Propose claims. Compound assertions are broken into statements that can be reviewed independently. Each is classified as observation, interpretation, causal inference, calculation or conjecture. Evidence is linked explicitly as supporting, contradicting or qualifying the claim, with a short rationale.
 
 4. Challenge and review. The workbench presents competing explanations and the strongest contrary evidence. The reviewer records a decision and rationale, chooses whether the claim is supported, contested, insufficiently evidenced or withdrawn, and specifies what could reopen it. Disagreement and changes of mind are preserved.
 
