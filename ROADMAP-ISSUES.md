@@ -24,7 +24,7 @@ If the Fellowship is funded: integrate the local AI engine; ship the first resea
 
 ## Open-source release with documented builds and owner-held keys
 
-Publish the software as open source, with documented firmware and OS builds, and with keys and backups remaining in the owner's possession, so that if the company disappears, owners lose nothing. Early code will be released as it stabilises; a full release with documented builds is proposed for Fellowship Q3 if that application is successful.
+Publish the appliance software as open source (AGPL), with documented firmware and OS builds, and with keys and backups remaining in the owner's possession, so that if the company disappears, owners lose nothing. Early code will be released as it stabilises; a full release with documented builds is proposed for Fellowship Q3 if that application is successful.
 
 ## Exploratory federated adaptation test, and a public prototype
 
@@ -32,4 +32,4 @@ If the Fellowship is funded: run a modest, exploratory test of federated adaptat
 
 ## Design the guild management module (not grant-funded)
 
-Every appliance is a standalone node and may join others as a guild node, with founders setting membership, governance and fees. The management module must still be designed and built. It is later open-source work, not funded by the current grant applications.
+Every appliance is a standalone node and may join others as a guild node, with founders setting membership, governance and fees. The management module must still be designed and built. It is later work as a separate commercial product, not funded by the current grant applications.

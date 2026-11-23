@@ -6,7 +6,7 @@
 
 ## Where this fits in Autarks' Home
 
-The Research Workbench is planned as the first research app on the local AI engine of the Autarks' Home appliance. Its purpose is to show owned, offline AI doing useful, checkable work for solo entrepreneurs, independent researchers and small publishers, with the sources, the records and the model all staying in the owner's home. The workbench treats the model as a source of suggestions, not of authority: the researcher owns the original idea and every decision, and each step from that idea to a testable statement is recorded where another person can check it. Like all Autarks' Home software, the workbench, its schema, method templates and example cases will be open source (AGPL proposed, not yet final), and usable without buying an appliance.
+The Research Workbench is planned as the first research app on the local AI engine of the Autarks' Home appliance. Its purpose is to show owned, offline AI doing useful, checkable work for solo entrepreneurs, independent researchers and small publishers, with the sources, the records and the model all staying in the owner's home. The workbench treats the model as a source of suggestions, not of authority: the researcher owns the original idea and every decision, and each step from that idea to a testable statement is recorded where another person can check it. Like all Autarks' Home appliance software, the workbench, its schema, method templates and example cases will be open source (AGPL), and usable without buying an appliance.
 
 ## Aim and research question
 
@@ -157,7 +157,7 @@ Arm C shows whether the method's structure helps by itself and whether local inf
 
 ## Open source and IP hygiene
 
-The workbench application, schema, method specification, templates and example cases, including the historical reference cases, will be open source, like all Autarks' Home software (AGPL proposed, not yet final). There are no paid method packs, proprietary editions or patents. A dated design log and an inventory of code, model terms, corpora and dependencies record the right to redistribute each; client material stays out of the public case set. The licence check on models and corpora is completed before the first public release.
+The workbench application, schema, method specification, templates and example cases, including the historical reference cases, will be open source, like all Autarks' Home appliance software (AGPL). There are no paid method packs, proprietary editions or patents. A dated design log and an inventory of code, model terms, corpora and dependencies record the right to redistribute each; client material stays out of the public case set. The licence check on models and corpora is completed before the first public release.
 
 ## Sustainability through services
 

@@ -20,7 +20,7 @@ The longer aim is a digital home people can own, run and govern: publishing they
 
 **The owner does two jobs.** One is familiar: running a publication — telling a story, showing work, serving readers. The other is less familiar: owning an appliance that should protect itself but still has to be looked after. First setup is honestly a short appliance job. Once a publication exists, day-to-day work should feel like publishing, with appliance management available when it is needed, and status always visible so the owner can look even when nothing is wrong.
 
-**If the company disappears, owners lose nothing.** Software will be open source, firmware and OS builds will be documented and published, and keys and backups stay in the owner's possession, so anyone can rebuild and maintain the system. You should not have to buy the appliance to use the software.
+**If the company disappears, owners lose nothing.** The appliance software will be open source (AGPL), firmware and OS builds will be documented and published, and keys and backups stay in the owner's possession, so anyone can rebuild and maintain the system. You should not have to buy the appliance to use the software.
 
 ## User journeys
 
@@ -40,7 +40,7 @@ Every Autarks' Home appliance is a node in its own right. It does not have to jo
 
 Beyond that, an appliance can join another appliance, or a group of appliances, as a guild node, and its owner thereby becomes a guild member. Whoever forms a guild — the founders, and in due course a board of governors — sets the rules for membership, governance and any fees. Membership fees, if any, are for each guild to decide, not for Autarks' Home to levy. Autarks' Home's role is that of an administrative tool. An appliance is not limited to one guild, so an owner can be a member of any number of guilds at once.
 
-While a guild has few members, the management system may run on a founder's own node; as it grows, members might set up a dedicated node for a guild manager. A guild management module must still be designed and built; it is not funded by the current grant applications. The software for that module is intended to be open source. Services around it — for example hosted or managed guild-manager nodes, setup and support — are a possible later source of revenue.
+While a guild has few members, the management system may run on a founder's own node; as it grows, members might set up a dedicated node for a guild manager. A guild management module must still be designed and built; it is not funded by the current grant applications. That module will be a separate commercial product, not open source. Services around it — for example hosted or managed guild-manager nodes, setup and support — are a possible later source of revenue.
 
 Guilds are the step from individual autarky to community. A guild could be individuals forming a club, a group of machine shops with complementary fabrication systems and skills, a parish council, a library, a co-op or a book publisher. One possibility being explored is sharing idle compute among guild nodes.
 

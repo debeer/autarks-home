@@ -1,6 +1,6 @@
 # Contributing
 
-The full Autarks' Home codebase is not in this repository yet. Code will be published here as it stabilises, before beta, once a licence has been confirmed.
+The full Autarks' Home codebase is not in this repository yet. Code will be published here as it stabilises, before beta, under the AGPL.
 
 Until then, issues and ideas are welcome on this repository. Please be specific, and do not report security vulnerabilities in public issues; email [john@debeer.com](mailto:john@debeer.com) instead.
 

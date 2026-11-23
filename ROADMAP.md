@@ -9,7 +9,7 @@ Current lab work, not funded by the Fellowship:
 - Keep the lab prototype running: a maxed-out Raspberry Pi 5 with a 2TB NVMe SSD and Power over Ethernet, on a switch with four other Pis.
 - Finish the owner-facing interface so that invited beta testers do not need a command line. The platform is about 90% ready for beta; this interface is the principal remaining step.
 - Add planned hardware-key and passkey authentication before invited beta. This is not built yet.
-- Publish finished code in this repository as it stabilises, before beta, under a confirmed open-source licence.
+- Publish finished code in this repository as it stabilises, before beta, under the AGPL.
 - Start invited beta once the interface and the planned authentication work are ready.
 
 The Fellowship letter also places finishing the interface, completing hardware-key authentication, and starting invited beta in Q1 (June–August 2027). If those steps are ready sooner, beta need not wait for the Fellowship year; if they are not, and the Fellowship is awarded, they fall in Q1.
@@ -36,7 +36,7 @@ Contingent on the Mozilla Fellowship application.
 
 - Add a paper-publishing path.
 - Release an open buyer's blueprint.
-- Release all software as open source, with documented firmware and OS builds and owner-held keys, usable without buying an appliance. (Earlier fragments of code will already have been published as they stabilised; this quarter is the commitment to a full release with documented builds.)
+- Release all appliance software as open source (AGPL), with documented firmware and OS builds and owner-held keys, usable without buying an appliance. (Earlier fragments of code will already have been published as they stabilised; this quarter is the commitment to a full release with documented builds.)
 
 **Q4 (March–May 2028)** — proposed, funded if the Fellowship is awarded
 
@@ -48,7 +48,7 @@ Contingent on the Mozilla Fellowship application.
 
 ## After beta, not funded by the current grant applications
 
-- Design and build the guild management module, as open-source software. Founders set membership, governance and fees. A founder's node may manage a small guild; a dedicated guild-manager node may be used as it grows.
+- Design and build the guild management module, as a separate commercial product. Founders set membership, governance and fees. A founder's node may manage a small guild; a dedicated guild-manager node may be used as it grows.
 - Paid services around guilds, such as hosted or managed guild-manager nodes, setup and support.
 - Exploration of sharing idle compute among guild nodes. This is a possibility being explored, not a committed deliverable.
 - Managed updates, backups and support as services for the years after launch.
