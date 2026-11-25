@@ -6,7 +6,7 @@ This roadmap distinguishes work that is already under way, work proposed as part
 
 Current lab work, not funded by the Fellowship:
 
-- Keep the lab prototype running: a maxed-out Raspberry Pi 5 with a 2TB NVMe SSD and Power over Ethernet, on a switch with four other Pis.
+- Keep the lab prototype running: a maxed-out Raspberry Pi 5 with a 2TB NVMe SSD and Power over Ethernet, on a switch with three other Pis.
 - Finish the owner-facing interface so that invited beta testers do not need a command line. The platform is about 90% ready for beta; this interface is the principal remaining step.
 - Add planned hardware-key and passkey authentication before invited beta. This is not built yet.
 - Publish finished code in this repository as it stabilises, before beta, under the AGPL.

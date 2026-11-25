@@ -17,7 +17,7 @@ It is packaged as a plug-and-play appliance, hosted in a home or office, perched
 
 ## What works today
 
-The core platform is about 90% ready for beta testing. The lab prototype is a maxed-out Raspberry Pi 5 with a 2TB NVMe SSD and Power over Ethernet, on a switch with four other Pis.
+The core platform is about 90% ready for beta testing. The lab prototype is a maxed-out Raspberry Pi 5 with a 2TB NVMe SSD and Power over Ethernet, on a switch with three other Pis.
 
 - A setup wizard onboards the owner.
 - A writer-first publishing workflow accepts finished work done on the owner's own computer and saves it as a draft in a containerised Ghost CMS, from where the author may publish it, complete with graphics and custom formatting.
