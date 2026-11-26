@@ -4,7 +4,7 @@ These are draft issues to open on the public repository later. They are planning
 
 ## Finish the owner-facing interface so invited beta needs no command line
 
-The lab prototype already onboards an owner and publishes drafts through the CMS. The remaining work before invited beta is principally a complete owner interface, after which the command line is no longer required.
+The lab prototype publishes drafts through the CMS and keeps encrypted backups off the premises. The first stage of a setup wizard is in place, and the rest is being built. The remaining work before invited beta is principally that wizard and a complete owner interface, after which the command line is no longer required.
 
 ## Add hardware-key and passkey authentication before invited beta
 
@@ -12,7 +12,7 @@ Hardware security keys and passkeys are planned before invited beta and are not 
 
 ## Run an invited beta of the core appliance
 
-Start an invited beta once the owner interface is complete and the planned authentication work is in place. The trial process is still being designed.
+Start an invited beta once the owner interface is complete, the planned authentication work is in place and there are volunteers to run it. The trial process is still being designed.
 
 ## Publish a design for a local AI peripheral
 

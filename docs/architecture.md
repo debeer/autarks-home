@@ -22,7 +22,7 @@ Hardware security keys and passkeys are planned before invited beta. They are no
 
 At a conceptual level:
 
-1. The owner sets the appliance up through the setup wizard.
+1. The owner sets the appliance up through the setup wizard (planned: its first stage is in place, and the rest is being built).
 2. The Core app creates a publication and provisions its CMS.
 3. The owner writes on their own computer and sends the finished piece to the appliance.
 4. The Core app places it in the CMS as a draft. The author reviews it and publishes.

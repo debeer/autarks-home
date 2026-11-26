@@ -15,14 +15,11 @@ Autarks' Home is an internet-enabled appliance with three main purposes:
 
 It is packaged as a plug-and-play appliance, hosted in a home or office, perched on a shelf or desk. It can host a website, keep published articles in order and, with a planned AI add-on, provide local compute power, without requiring that its owner learn server administration. Association is enabled by a guild paradigm, planned for in the architecture so that individual owners may progress to guild founders.
 
-## What works today
+## Where it stands (November 2026)
 
-The core platform is about 90% ready for beta testing. The lab prototype is a maxed-out Raspberry Pi 5 with a 2TB NVMe SSD and Power over Ethernet, on a switch with three other Pis.
+A working prototype runs in the lab on a Raspberry Pi 5 with a 2TB NVMe SSD and Power over Ethernet, on a switch with three other Pis. It publishes: finished work written on the owner's own computer arrives as a draft in a containerised Ghost CMS, from where the author publishes it, complete with graphics and custom formatting. It keeps encrypted backups off the premises, and a backup has been restored on a blank machine. The first stage of a setup wizard is in place, and the rest is being built. Until it is finished, setting up an appliance still needs the command line. An invited beta follows once the wizard is complete and there are volunteers to run it.
 
-- A setup wizard onboards the owner.
-- A writer-first publishing workflow accepts finished work done on the owner's own computer and saves it as a draft in a containerised Ghost CMS, from where the author may publish it, complete with graphics and custom formatting.
-
-Beta testing starts as soon as the user interface, currently under development, is complete, after which the command line is no longer required.
+Progress is reported in dated entries at [autarks-home.com](https://autarks-home.com).
 
 [demo to be added]
 
