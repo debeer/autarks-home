@@ -1,14 +1,16 @@
 # Roadmap
 
-This roadmap distinguishes work that is already under way, work proposed as part of a Mozilla Foundation Fellowship (June 2027–May 2028), and work that is outside the Fellowship and every grant application. This page is the authority on which is which. Fellowship items are proposed deliverables: they would be undertaken if that application is successful, and Mozilla notes that milestones are subject to revision if a Fellow is selected.
+This roadmap distinguishes work that is already under way, work proposed as part of a Mozilla Foundation Fellowship (June 2027–May 2028), and work that is outside the Fellowship and every grant application. This page is the authority on which is which.
+
+This page lists only work still to be done, so it gets shorter as the work advances. When an item is finished it is removed from this page and reported in a dated entry on the website, [autarks-home.com](https://autarks-home.com). Nothing is added without saying which side of the grant line it falls on. Fellowship items are proposed deliverables: they would be undertaken if that application is successful, and Mozilla notes that milestones are subject to revision if a Fellow is selected.
 
 ## Before the Fellowship, and in any case
 
 Current lab work, not funded by the Fellowship:
 
 - Keep the lab prototype running: a maxed-out Raspberry Pi 5 with a 2TB NVMe SSD and Power over Ethernet, on a switch with three other Pis.
-- Finish the owner-facing interface, the setup wizard above all, so that invited beta testers do not need a command line. The first stage of the wizard is in place, and the rest is being built. This is the principal remaining step.
-- Add planned hardware-key and passkey authentication before invited beta. This is not built yet.
+- Finish the owner-facing interface, the setup wizard above all, so that invited beta testers do not need a command line. This is the principal remaining step.
+- Add hardware-key and passkey authentication before invited beta.
 - Publish finished code in this repository as it stabilises, before beta, under the AGPL.
 - Start invited beta once the interface and the planned authentication work are ready and there are volunteers to run it.
 
@@ -24,6 +26,7 @@ Contingent on the Mozilla Fellowship application.
 - Complete planned hardware-key authentication.
 - Start that beta.
 - Publish a design for a local AI peripheral, with inference and raw data kept on the premises.
+- Independently of the beta, build the [Research Workbench](docs/research-workbench.md), and test with blind expert ratings whether it does better than a prompted model alone.
 
 **Q2 (September–November 2027)** — proposed, funded if the Fellowship is awarded
 
