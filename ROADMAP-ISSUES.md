@@ -33,3 +33,7 @@ If the Fellowship is funded: run a modest, exploratory test of federated adaptat
 ## Design the guild management module (not grant-funded)
 
 Every appliance is a standalone node and may join others as a guild node, with founders setting membership, governance and fees. The management module must still be designed and built. It is later work as a separate commercial product, not funded by the current grant applications.
+
+## Design the data modeling module (not grant-funded)
+
+A data modeling module is also planned: a general-purpose tool for designing and maintaining models of an owner's or a group's own data, in any subject, so that a local AI can work on it, with AI assisting in the modeling. It is later work, is not funded by any grant application, and will be a separate commercial product, outside the open-source commitment. It is an optional addition. The open appliance, the AI engine and the Research Workbench do not depend on it and are usable without it.

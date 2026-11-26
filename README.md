@@ -34,13 +34,17 @@ Before invited beta, the remaining work is principally the owner-facing interfac
 
 If funded, the Fellowship year (June 2027–May 2028) would add a local AI peripheral, research and paper-publishing applications, an open buyer's blueprint, compute-per-pound and per-watt benchmarks, and a modest exploratory test of federated adaptation across mixed, intermittently connected home appliances. A public prototype would ship within that year, usable without buying an appliance.
 
-A guild management module must still be designed and built. It is on the roadmap after beta, is not funded by the current grant applications, and will be a separate commercial product. See [ROADMAP.md](ROADMAP.md) for the full picture, with funded and unfunded work labelled.
+A guild management module must still be designed and built. It is on the roadmap after beta, is not funded by the current grant applications, and will be a separate commercial product.
+
+A data modeling module is also planned: a general-purpose tool for designing and maintaining models of an owner's or a group's own data, in any subject, so that a local AI can work on it, with AI assisting in the modeling. It is later work, is not funded by any grant application, and will be a separate commercial product, outside the open-source commitment. It is an optional addition. The open appliance, the AI engine and the Research Workbench do not depend on it and are usable without it.
+
+See [ROADMAP.md](ROADMAP.md) for the full picture, with funded and unfunded work labelled.
 
 ## Open source
 
 The Autarks' Home appliance software will be open source under the GNU Affero General Public Licence (AGPL): everything that runs on the appliance and its planned AI peripheral, including the research applications. You should not have to buy the appliance to use the software.
 
-The guild management module is later work, not funded by any grant application. It will be a separate commercial product and is not part of this open-source commitment.
+The guild management module and the data modeling module come later, as separate commercial products, and are not part of this open-source commitment. The open software does not depend on either.
 
 The commitment is that if the company disappears, owners lose nothing: firmware and OS builds will be fully documented and published, and keys and backups stay in the owner's possession, so anyone can rebuild and maintain the system.
 

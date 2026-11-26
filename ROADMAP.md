@@ -1,6 +1,6 @@
 # Roadmap
 
-This roadmap distinguishes work that is already under way, work proposed as part of a Mozilla Foundation Fellowship (June 2027–May 2028), and later work that is not funded by the current grant applications. Fellowship items are proposed deliverables: they would be undertaken if that application is successful, and Mozilla notes that milestones are subject to revision if a Fellow is selected.
+This roadmap distinguishes work that is already under way, work proposed as part of a Mozilla Foundation Fellowship (June 2027–May 2028), and work that is outside the Fellowship and every grant application. This page is the authority on which is which. Fellowship items are proposed deliverables: they would be undertaken if that application is successful, and Mozilla notes that milestones are subject to revision if a Fellow is selected.
 
 ## Before the Fellowship, and in any case
 
@@ -46,9 +46,10 @@ Contingent on the Mozilla Fellowship application.
 - Ship a public prototype with documentation.
 - Begin opt-in owner discovery.
 
-## After beta, not funded by the current grant applications
+## Outside the Fellowship and every grant application
 
 - Design and build the guild management module, as a separate commercial product. Founders set membership, governance and fees. A founder's node may manage a small guild; a dedicated guild-manager node may be used as it grows.
+- Design and build a data modeling module: a general-purpose tool for designing and maintaining models of an owner's or a group's own data, in any subject, so that a local AI can work on it, with AI assisting in the modeling. It is later work, is not funded by any grant application, and will be a separate commercial product, outside the open-source commitment. It is an optional addition. The open appliance, the AI engine and the Research Workbench do not depend on it and are usable without it.
 - Paid services around guilds, such as hosted or managed guild-manager nodes, setup and support.
 - Exploration of sharing idle compute among guild nodes. This is a possibility being explored, not a committed deliverable.
 - Managed updates, backups and support as services for the years after launch.

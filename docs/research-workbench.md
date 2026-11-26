@@ -8,6 +8,12 @@
 
 The Research Workbench is planned as the first research app on the local AI engine of the Autarks' Home appliance. Its purpose is to show owned, offline AI doing useful, checkable work for solo entrepreneurs, independent researchers and small publishers, with the sources, the records and the model all staying in the owner's home. The workbench treats the model as a source of suggestions, not of authority: the researcher owns the original idea and every decision, and each step from that idea to a testable statement is recorded where another person can check it. Like all Autarks' Home appliance software, the workbench, its schema, method templates and example cases will be open source (AGPL), and usable without buying an appliance.
 
+## What the Workbench is, and what it is not
+
+The Research Workbench is one application with one job: recording the trail from a researcher's first guess to a testable statement. Its schema is fixed and published as part of the method. It consists of the record types listed under "Data and ownership", and it is the same for every user. All of it is open source.
+
+The Workbench does not design data models, and it does not model an owner's other data. That is the purpose of a planned data modeling module, which is a separate commercial product. The Workbench does not depend on that module and is complete without it.
+
 ## Aim and research question
 
 Much good research starts with a hunch: a first guess, grasped before it can be justified, resting on assumptions not yet spelled out. Few tools help turn an instinct into something that can be tested. Version 3 of the workbench is built around that step. It does not follow a fixed route from theory, through experiment, to conclusion. It starts from a first guess and its assumptions, works out what must logically follow if the guess is right, and then asks which consequences can be checked against evidence or tested by experiment. The philosopher Charles Sanders Peirce described this pattern of guess, deduction and test; the workbench uses it in plain terms.
@@ -157,7 +163,7 @@ Arm C shows whether the method's structure helps by itself and whether local inf
 
 ## Open source and IP hygiene
 
-The workbench application, schema, method specification, templates and example cases, including the historical reference cases, will be open source, like all Autarks' Home appliance software (AGPL). There are no paid method packs, proprietary editions or patents. A dated design log and an inventory of code, model terms, corpora and dependencies record the right to redistribute each; client material stays out of the public case set. The licence check on models and corpora is completed before the first public release.
+The workbench application, schema, method specification, templates and example cases, including the historical reference cases, will be open source, like all Autarks' Home appliance software (AGPL). There are no paid method packs, proprietary editions or patents. This covers the Workbench only; the separate data modeling module is outside it. A dated design log and an inventory of code, model terms, corpora and dependencies record the right to redistribute each; client material stays out of the public case set. The licence check on models and corpora is completed before the first public release.
 
 ## Sustainability through services
 

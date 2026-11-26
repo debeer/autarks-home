@@ -42,6 +42,8 @@ Beyond that, an appliance can join another appliance, or a group of appliances, 
 
 While a guild has few members, the management system may run on a founder's own node; as it grows, members might set up a dedicated node for a guild manager. A guild management module must still be designed and built; it is not funded by the current grant applications. That module will be a separate commercial product, not open source. Services around it — for example hosted or managed guild-manager nodes, setup and support — are a possible later source of revenue.
 
+A data modeling module is also planned: a general-purpose tool for designing and maintaining models of an owner's or a group's own data, in any subject, so that a local AI can work on it, with AI assisting in the modeling. It is later work, is not funded by any grant application, and will be a separate commercial product, outside the open-source commitment. It is an optional addition. The open appliance, the AI engine and the Research Workbench do not depend on it and are usable without it.
+
 Guilds are the step from individual autarky to community. A guild could be individuals forming a club, a group of machine shops with complementary fabrication systems and skills, a parish council, a library, a co-op or a book publisher. One possibility being explored is sharing idle compute among guild nodes.
 
 ## Planned AI peripheral
